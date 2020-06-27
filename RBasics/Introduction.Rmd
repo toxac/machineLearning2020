@@ -1,0 +1,55 @@
+---
+title: "Introduction to R-1, Variables and Datatypes"
+output: html_notebook
+---
+
+This is first notebook in the set. It is going to give you a basic understanding and working knowledge of the language.
+
+## Simple Operations
+To get comfortable with R we will carry out few basic calculations which we are very familair with. 
+- Addition operator (+)
+- Subtraction operator (-)
+- Multiplication operator (*)
+- Division Operator (/)  
+- Integer Division (%/%)
+- Modulus Operator (%%)
+
+```{r}
+# Simple arithmetic to get things started
+10+2 # Addition
+10-2 # Subtraction
+10 * 2 # Multiplication
+10/2 # division
+10 %% 2 # Modulus
+10 %/% 3 # Integer division
+
+```
+
+R allows us to store data, which we can used anywhere in our program and we are not just limited to basic calculations. R stores information inside something called an "Object". Each of these objects can be given a name and when we want to use that information we can recall it by using the name. 
+
+```{r}
+# Storing information about rockets
+name <- "falcon heavy"
+maxPayload <- 63800
+elephantWeight <- 4800
+
+# If we were curious how many elephants we can send to space in falcon heavy we can calculate that using the information we have stored.
+numberOfElephants <- maxPayload %/% elephantWeight # we want integer division as we want to take whole living elephants
+numberOfElephants
+```
+# Storing Data
+The name of the object or "*variable*" is places on the left hand side and operator (<-) assigns value of the "*expression*" on the right to it. In the example above, "falcon heavy" is stored in our program under the variable "name"
+
+## Naming variables 
+You should name or variables in a way that they are explicit and can be understood easily. You want to have variable names like (x) or (y). In a program with hundred of libe of code you will have to scroll up to your assignment line to figure out what is x referring to. 
+
+There are also limitation ti what you can name your variables. Your name cannot start with a number and it cannot have special symbols that we use as *operators or other such as @, ! or ^*.
+
+```{r}
+ls()
+# ls function gives you list of all the variable names that are currently in use 
+```
+
+
+# Order of Execution
+In R, program is execution sequentially, element by element
